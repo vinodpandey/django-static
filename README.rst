@@ -152,6 +152,10 @@ manually upload css and javascript files to CDN. On production, where DEBUG=Fals
 django-static will pick the filenames from manifest.json file instead of 
 doing all the calculations.
 
+The concatenation and compressing process can also be jump started outside of the request/response cycle
+by using the Django management command manage.py compress and the file names are stored in manifest.json. This json file
+and related css/javascript files can then be deployed manually to production.
+
 
 Advanced configuration with DJANGO_STATIC_FILE_PROXY
 ----------------------------------------------------
